@@ -33,10 +33,11 @@ __Summary of Issues__
 The JSON schema is not fully compliant with the standard JSON Schema specification. JSON Schema doesn't recognize some elements like `type: set`, `type: date`, `options`, `default` with functions, or `query`.
 
 ### Custom Types
-- **Problem**: Types such as `set` and `date` are not standard JSON Schema types.
+- **Problem**: Types such as `set`, `date` and `record` are not standard JSON Schema types.
 - __Suggestion__:
     - For `set`: Use the standard JSON Schema `array` type with the `items` keyword specifying the type of items the array should contain.
     - For `date`: Use the `string` type with the `format` keyword set to `date-time` to represent date values.
+    - For `record`: Use the `object` type, maybe with the `format` keyword set to 
 
 ### Options Property
 - **Problem**: The `options` property is not a standard JSON Schema keyword.
